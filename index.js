@@ -11,8 +11,8 @@ const path = require('path');
 const MARKER_FILE = path.join(__dirname, 'marker.json'); // маркер long polling вместо offset
 
 // ============ APPS SCRIPT (мост к таблице) — без изменений ============
-const APPS_URL = 'https://script.google.com/macros/s/AKfycbxBQK8jcQXlKpWzRzt2M29EjMOj0JxEJJUtr4iqOKjjSXMH3Y5IDq1gF4NngK_3PTRJ/exec';
-const APPS_SECRET = 'Kq7vd2RzP9mWt4LxNb6Fy8sH3uAe5GcQ';
+const APPS_URL = process.env.APPS_URL;
+const APPS_SECRET = process.env.APPS_SECRET;
 
 const userState = {}; // userId -> { object: '...' }
 
